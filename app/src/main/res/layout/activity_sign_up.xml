@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:foregroundGravity="center"
         android:padding="12dp"
         app:srcCompat="@drawable/ceramifylogo" />
@@ -30,10 +30,11 @@
         app:srcCompat="@drawable/ceramify" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="345dp"
+        android:layout_width="310dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
+        android:gravity="center"
         app:boxBackgroundColor="#E4D4BC"
         app:boxCornerRadiusBottomEnd="25dp"
         app:boxCornerRadiusBottomStart="25dp"
@@ -45,17 +46,17 @@
         app:startIconDrawable="@drawable/baseline_person_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/etName"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:fontFamily="@font/alice"
             android:hint="Name"
             android:inputType="text"
-            android:id="@+id/etName"
             android:textColor="#8A6A4B"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="345dp"
+        android:layout_width="310dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
@@ -69,20 +70,20 @@
         app:helperTextTextColor="#FF0000">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:fontFamily="@font/alice"
             android:id="@+id/etUsername"
             android:hint="Username"
             android:inputType="text"
             android:textColor="#8A6A4B"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="345dp"
+        android:layout_width="310dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
@@ -97,18 +98,18 @@
         app:helperTextTextColor="#FF0000">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:id="@+id/etMail"
             android:fontFamily="@font/alice"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:textColor="#8A6A4B"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="345dp"
+        android:layout_width="310dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
@@ -123,27 +124,27 @@
         app:helperTextTextColor="#FF0000">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:fontFamily="@font/alice"
             android:hint="Password"
             android:id="@+id/etPassword"
             android:inputType="textPassword"
             android:textColor="#8A6A4B"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="125dp"
-        android:layout_height="40dp"
+        android:layout_height="37dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/alice"
         android:text="Sign Up"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#8A6A4B"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:backgroundTint="#E4D4BC"
         app:strokeColor="#CAA883"

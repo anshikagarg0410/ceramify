@@ -16,7 +16,7 @@
         android:foregroundGravity="center"
         android:layout_gravity="center"
         android:padding="12dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         app:srcCompat="@drawable/ceramifylogo" />
 
 
@@ -30,10 +30,10 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="345dp"
+        android:layout_width="310dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/alice"
         android:text="Login"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -46,7 +46,7 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="345dp"
+        android:layout_width="315dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
