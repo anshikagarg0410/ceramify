@@ -22,24 +22,23 @@ class DetailedActivity : AppCompatActivity() {
         binding = ActivityDetailedBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 🔙 Back button
+
         binding.imageView3.setOnClickListener {
             finish()
         }
 
-        // 🖼️ Get intent data
         val image = intent.getIntExtra("InstructorImage", R.drawable.potter1)
         val title = intent.getStringExtra("courseTitle")
         val description = intent.getStringExtra("courseDescription")
         val instructorName = intent.getStringExtra("instructorName")
 
-        // 🖊️ Set data
+
         binding.imageView5.setImageResource(image)
         binding.courseTitle.text = title
         binding.courseDescription.text = description
         binding.textView12.text = "INSTRUCTOR NAME\n$instructorName"
 
-        // ♂️♀️ Gender dropdown
+
         val genderOptions = listOf("Male", "Female", "Other")
         val genderAdapter = ArrayAdapter(
             this,
@@ -53,7 +52,7 @@ class DetailedActivity : AppCompatActivity() {
             genderDropdown.showDropDown()
         }
 
-        // 💳 Register button
+
         binding.payButton.setOnClickListener {
             val name = binding.editTextText3.text.toString().trim()
             val email = binding.editTextText4.text.toString().trim()
@@ -69,9 +68,7 @@ class DetailedActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in all details", Toast.LENGTH_SHORT).show()
             }
         }
-
-        // 📱 Fullscreen layout insets
-        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+       ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             view.setPadding(
                 systemBars.left,
