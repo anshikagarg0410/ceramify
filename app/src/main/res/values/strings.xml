@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Ceramify</string>
+    <string name="course_title">course_title</string>
+    <string name="course_description">course_description\n</string>
+    <string name="course_type">course_type\n</string>
+    <string name="full_name">full_name</string>
+    <string name="email">email</string>
+    <string name="phone">phone\n</string>
+    <string name="address">address\n</string>
+    <string name="gender">gender\n</string>
 </resources>
