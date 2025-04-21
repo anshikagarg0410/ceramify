@@ -8,4 +8,6 @@
     <string name="phone">phone\n</string>
     <string name="address">address\n</string>
     <string name="gender">gender\n</string>
+    <string name="fragment_1" type="id" />
+    <string name="fragment_2" type="id" />
 </resources>

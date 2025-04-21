@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:padding="8dp">
 
-    <!-- Reduced width card centered using constraints -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/courseCard"
         android:layout_width="0dp"
@@ -24,14 +24,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Inner ConstraintLayout for content -->
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/card_border_brown"
             android:padding="8dp">
 
-            <!-- Left-rounded image -->
+
             <ImageView
                 android:id="@+id/listImage"
                 android:layout_width="167dp"
@@ -46,9 +46,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- Title -->
 
-            <!-- Details -->
 
             <TextView
                 android:id="@+id/listTitle"
@@ -63,7 +61,6 @@
                 app:layout_constraintStart_toEndOf="@id/listImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- REGISTER Button -->
 
             <TextView
                 android:id="@+id/listDetails"

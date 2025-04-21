@@ -70,7 +70,6 @@ class CourseMainActivity2 : AppCompatActivity() {
                     putExtra("InstructorName", it.instructorName)
                 }
                 startActivity(intent)
-            }
-        }
+            }      }
     }
 }
