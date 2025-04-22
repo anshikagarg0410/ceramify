@@ -9,8 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.igdtuw.buypage.databinding.ActivityPersonalizedBinding
-import com.igdtuw.buypage.databinding.ActivityTrendingBinding
+import com.igdtuw.ceramify.databinding.ActivityPersonalizedBinding
 
 class PersonalizedActivity : AppCompatActivity() {
     private lateinit var submit: Button
