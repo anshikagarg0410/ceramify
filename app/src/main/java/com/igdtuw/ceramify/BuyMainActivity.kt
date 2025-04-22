@@ -5,22 +5,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
 import android.content.Intent
-import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.igdtuw.buypage.GiftActivity
-import com.igdtuw.buypage.PersonalizedActivity
-import com.igdtuw.buypage.PremadeActivity
-import com.igdtuw.buypage.TrendingActivity
-import com.igdtuw.buypage.databinding.ActivityMainBinding
+import com.igdtuw.ceramify.GiftActivity
+import com.igdtuw.ceramify.PersonalizedActivity
+import com.igdtuw.ceramify.PremadeActivity
+import com.igdtuw.ceramify.TrendingActivity
 import com.igdtuw.ceramify.databinding.ActivityBuyMainBinding
 
-class MainActivity : AppCompatActivity() {
+class BuyMainActivity : AppCompatActivity() {
     private val TAG: String = "MainActivity"
 
 

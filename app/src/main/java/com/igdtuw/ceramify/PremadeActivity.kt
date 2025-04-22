@@ -7,9 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.igdtuw.buypage.databinding.ActivityGiftBinding
-import com.igdtuw.buypage.databinding.ActivityPremadeBinding
-import com.igdtuw.buypage.databinding.ActivityTrendingBinding
+
+import com.igdtuw.ceramify.databinding.ActivityPremadeBinding
+
 
 class PremadeActivity : AppCompatActivity() {
     private lateinit var addtocartbutn1: Button

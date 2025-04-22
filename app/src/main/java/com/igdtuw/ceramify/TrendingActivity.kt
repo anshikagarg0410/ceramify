@@ -8,13 +8,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.igdtuw.buypage.databinding.ActivityTrendingBinding
-import com.igdtuw.ceramify.databinding.ActivityBuyMainBinding
+import com.igdtuw.ceramify.databinding.ActivityTrendingBinding
+
 
 class TrendingActivity : AppCompatActivity() {
     private lateinit var addtocartbutton: Button
     private lateinit var cartbutton: Button
-    private lateinit var binding:ActivityBuyMainBinding
+    private lateinit var binding: ActivityTrendingBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
