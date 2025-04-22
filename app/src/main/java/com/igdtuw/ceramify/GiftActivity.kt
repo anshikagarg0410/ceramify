@@ -20,7 +20,7 @@ class GiftActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityGiftBindng.inflate(layoutInflater)
+        binding = ActivityBuyMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         addtocartbtn = findViewById(R.id.addToCartBtn1)
