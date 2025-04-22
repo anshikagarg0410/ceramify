@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.igdtuw.ceramify" />
-                  <option name="mobileSdkAppId" value="1:847533550268:android:1c49f1e0aaa5d1675afeb9" />
-                  <option name="projectId" value="ceramify-555a7" />
-                  <option name="projectNumber" value="847533550268" />
+                  <option name="mobileSdkAppId" value="1:1087710823069:android:cb39df57906366f2ee0a74" />
+                  <option name="projectId" value="ceramify-17b679e2" />
+                  <option name="projectNumber" value="1087710823069" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

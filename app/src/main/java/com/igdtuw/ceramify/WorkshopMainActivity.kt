@@ -1,5 +1,7 @@
+// WorkshopMainActivity.kt
 package com.igdtuw.ceramify
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.igdtuw.ceramify.databinding.ActivityWorkshopMainBinding
@@ -7,7 +9,7 @@ import com.igdtuw.ceramify.databinding.ActivityWorkshopMainBinding
 class WorkshopMainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWorkshopMainBinding
     private lateinit var listAdapter: ListAdapter1
-    private var dataArrayList = ArrayList<ListData1>()  // ✅ Fixed here
+    private var dataArrayList = ArrayList<ListData1>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,5 +51,11 @@ class WorkshopMainActivity : AppCompatActivity() {
 
         listAdapter = ListAdapter1(this, dataArrayList)
         binding.listview.adapter = listAdapter
+
+        binding.listview.setOnItemClickListener { _, _, position, _ ->
+            val intent = Intent(this, WorkshopMainActivity2::class.java)
+            intent.putExtra("workshopName", nameList[position])
+            startActivity(intent)
+        }
     }
 }

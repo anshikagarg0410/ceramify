@@ -1,3 +1,4 @@
+// Fragment2.kt (Mentee RSVP)
 package com.igdtuw.ceramify
 
 import android.os.Bundle
@@ -7,12 +8,10 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.firestore.FirebaseFirestore
 import com.igdtuw.ceramify.databinding.Fragment1Binding
 
-
 class Fragment2 : Fragment() {
-
     private var _binding: Fragment1Binding? = null
     private val binding get() = _binding!!
 
@@ -27,29 +26,21 @@ class Fragment2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Setup gender dropdown
         val genderOptions = listOf("Male", "Female", "Other")
-        val genderAdapter = ArrayAdapter(
-            requireContext(),
-            android.R.layout.simple_dropdown_item_1line,
-            genderOptions
-        )
+        val genderAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, genderOptions)
         binding.menteeGenderAutoComplete.setAdapter(genderAdapter)
         binding.menteeGenderAutoComplete.threshold = 0
         binding.menteeGenderAutoComplete.setOnClickListener {
             binding.menteeGenderAutoComplete.showDropDown()
         }
 
-        // Back arrow click handler
         binding.backArrow.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
-        // Set workshop heading
         val workshopName = arguments?.getString("workshopName") ?: "Workshop"
         binding.workshopHeading.text = "RSVP for $workshopName \nas Mentee"
 
-        // RSVP button click
         binding.menteeSubmit.setOnClickListener {
             val name = binding.menteeName.editText?.text.toString().trim()
             val email = binding.menteeEmail.editText?.text.toString().trim()
@@ -63,17 +54,27 @@ class Fragment2 : Fragment() {
                 return@setOnClickListener
             }
 
-            val message = """
-            ✅ RSVP Confirmed for $workshopName
-            
-            👤 $name | 📧 $email | 📱 $phone
-            🧠 $profession | 🏫 $institution | ⚧ $gender
-        """.trimIndent()
+            val db = FirebaseFirestore.getInstance()
+            val menteeData = hashMapOf(
+                "name" to name,
+                "email" to email,
+                "phone" to phone,
+                "gender" to gender,
+                "profession" to profession,
+                "institution" to institution,
+                "role" to "Mentee"
+            )
 
-            Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
+            db.collection("workshops").document(workshopName)
+                .collection("rsvps").add(menteeData)
+                .addOnSuccessListener {
+                    Toast.makeText(requireContext(), "RSVP submitted successfully!", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener {
+                    Toast.makeText(requireContext(), "Failed to submit RSVP.", Toast.LENGTH_SHORT).show()
+                }
         }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

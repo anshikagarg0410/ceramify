@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "847533550268",
-    "project_id": "ceramify-555a7",
-    "storage_bucket": "ceramify-555a7.firebasestorage.app"
+    "project_number": "1087710823069",
+    "project_id": "ceramify-17b679e2",
+    "storage_bucket": "ceramify-17b679e2.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:847533550268:android:1c49f1e0aaa5d1675afeb9",
+        "mobilesdk_app_id": "1:1087710823069:android:cb39df57906366f2ee0a74",
         "android_client_info": {
           "package_name": "com.igdtuw.ceramify"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAUr8UQCtPEJLw-P725qmJkVFyYTip5D8w"
+          "current_key": "AIzaSyDrXcFiTGyoIbfuX_4po-SCZJfaF5J9tvg"
         }
       ],
       "services": {

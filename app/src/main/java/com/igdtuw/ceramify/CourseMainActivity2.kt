@@ -14,12 +14,9 @@ class CourseMainActivity2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Correct binding reference to layout
         binding = ActivityCourseMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Prepare course list
         val courseList = listOf(
             ListData(
                 R.drawable.course1,
@@ -55,21 +52,25 @@ class CourseMainActivity2 : AppCompatActivity() {
 
         dataArrayList.addAll(courseList)
 
-        // Initialize and set adapter
         listAdapter = ListAdapter(this, dataArrayList)
         binding.listView.adapter = listAdapter
 
-        // Handle item click
-        binding.listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, i, _ ->
-            val selectedCourse = dataArrayList[i]
-            selectedCourse?.let {
-                val intent = Intent(this, DetailedActivity::class.java).apply {
-                    putExtra("courseTitle", it.title)
-                    putExtra("courseDescription", it.fullDescription)
-                    putExtra("InstructorImage", it.instructorImage)
-                    putExtra("InstructorName", it.instructorName)
-                }
-                startActivity(intent)
-            }      }
+        binding.listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+            val selectedCourse = dataArrayList[position]
+
+            val intent = when (selectedCourse?.title) {
+                "SILVER COURSE" -> Intent(this, DetailedActivity::class.java)
+                "GOLDEN COURSE" -> Intent(this, DetailedActivity1::class.java)
+                "PLATINUM COURSE" -> Intent(this, DetailedActivityPlatinum::class.java)
+                else -> Intent(this, DetailedActivity::class.java)
+            }
+
+            intent.putExtra("courseTitle", selectedCourse?.title)
+            intent.putExtra("courseDescription", selectedCourse?.fullDescription)
+            intent.putExtra("InstructorImage", selectedCourse?.instructorImage ?: R.drawable.potter1)
+            intent.putExtra("instructorName", selectedCourse?.instructorName)
+
+            startActivity(intent)
+        }
     }
 }

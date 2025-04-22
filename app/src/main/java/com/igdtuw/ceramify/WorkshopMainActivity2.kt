@@ -1,11 +1,12 @@
+// WorkshopMainActivity2.kt
 package com.igdtuw.ceramify
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.igdtuw.ceramify.databinding.ActivityWorkshopMain2Binding
 import androidx.fragment.app.Fragment
+import com.igdtuw.ceramify.databinding.ActivityWorkshopMain2Binding
 
 class WorkshopMainActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivityWorkshopMain2Binding
@@ -48,4 +49,3 @@ class WorkshopMainActivity2 : AppCompatActivity() {
             .commit()
     }
 }
-
