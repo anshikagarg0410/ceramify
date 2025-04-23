@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/Home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
@@ -76,9 +76,11 @@
             android:layout_weight="1"
             android:background="@drawable/button_border"
             android:clickable="true"
+            android:focusable="true"
             android:orientation="vertical"
             android:padding="10dp"
-            android:visibility="visible">
+            android:visibility="visible"
+            android:id="@+id/sellLayout">
 
             <ImageView
                 android:layout_width="45dp"
@@ -109,15 +111,17 @@
             android:layout_weight="1"
             android:background="@drawable/button_border"
             android:clickable="true"
+            android:focusable="true"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:id="@+id/buyLayout">
 
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:contentDescription="Sell Icon"
+                android:contentDescription="Buy Icon"
                 android:src="@drawable/logobuy" />
 
             <TextView
@@ -142,14 +146,15 @@
             android:background="@drawable/button_border"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:id="@+id/shopsnearbyLayout">
 
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:contentDescription="Sell Icon"
+                android:contentDescription="Shops nearby Icon"
                 android:src="@drawable/logoshopsnearby" />
 
             <TextView
@@ -175,14 +180,15 @@
             android:background="@drawable/button_border"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:id="@+id/workshopsLayout">
 
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:contentDescription="Sell Icon"
+                android:contentDescription="workshops Icon"
                 android:src="@drawable/logoworkshops" />
 
             <TextView
@@ -203,6 +209,7 @@
             android:layout_columnSpan="1"
             android:layout_columnWeight="1"
             android:layout_margin="25dp"
+            android:id="@+id/coursesLayout"
             android:layout_weight="1"
             android:background="@drawable/button_border"
             android:clickable="true"
@@ -214,7 +221,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:contentDescription="Sell Icon"
+                android:contentDescription="courses Icon"
                 android:src="@drawable/logocourses" />
 
             <TextView
@@ -236,6 +243,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="25dp"
             android:layout_weight="1"
+            android:id="@+id/collabsLayout"
             android:background="@drawable/button_border"
             android:clickable="true"
             android:orientation="vertical"
@@ -246,7 +254,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:contentDescription="Sell Icon"
+                android:contentDescription="collabs Icon"
                 android:src="@drawable/logocollabs" />
 
             <TextView

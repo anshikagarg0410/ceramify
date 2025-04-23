@@ -53,6 +53,11 @@ dependencies {
 
     // ✅ Firebase BoM - handles version compatibility
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+
+    // Include Firebase Analytics to enable FirebaseApp.initializeApp
+    implementation("com.google.firebase:firebase-analytics")
+
+    // Your other Firebase modules
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-database")
 

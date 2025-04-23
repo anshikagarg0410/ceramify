@@ -33,7 +33,7 @@ class BuyMainActivity : AppCompatActivity() {
             insets
         }
 
-        binding.Gift.setOnClickListener {
+        binding.gift.setOnClickListener {
             startActivity(Intent(this, GiftActivity::class.java))
         }
 

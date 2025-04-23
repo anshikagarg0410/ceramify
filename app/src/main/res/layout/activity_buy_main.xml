@@ -1,223 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/Home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgrd"
-    tools:context=".MainActivity">
+    tools:context=".HomeActivity"
+    android:background="@drawable/img"
+    android:foregroundTint="#E4D4BC"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/baseline_arrow_back_ios_24" />
+
+        <!-- Ceramify Logo -->
 
 
-    <!--    <ImageView-->
+        <!-- Profile Icon -->
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/baseline_person_24" />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:foregroundGravity="center"
+        android:padding="12dp"
+        app:srcCompat="@drawable/ceramifylogo" />
 
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="332dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/logo" />
-
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
+        app:srcCompat="@drawable/ceramify" />
 
     <TextView
-        android:id="@+id/subtitle"
-        android:layout_width="wrap_content"
+        android:layout_width="289dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="What do you wish to buy?"
-        android:textColor="#7B3F00"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/alice"
+        android:layout_marginTop="10dp"
+        android:text="What you wish to buy?"
+        android:textColor="#71410D"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-    <Button
-        android:id="@+id/imageView6"
-        android:layout_width="26dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/arrow_image"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/imageView7"
-        android:layout_width="34dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="28dp"
-        android:background="@drawable/home_image"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <!-- Grid Layout for Categories -->
+        android:textStyle="bold" />
     <GridLayout
-        android:id="@+id/categoryGrid"
-        android:layout_width="0dp"
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:alignmentMode="alignMargins"
-        android:columnCount="2"
-        android:padding="10dp"
-        android:rowCount="2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subtitle">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:columnCount="2">
 
-        <!-- GIFT Card -->
-        <androidx.cardview.widget.CardView
+        <!-- Copy the SELL button layout here for each item -->
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
+            android:layout_height="125dp"
+            android:layout_columnSpan="1"
             android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="#ECD7B2"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:id="@+id/gift">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:cardBackgroundColor="#ECD7B2">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="gift icon"
+                android:src="@drawable/gift" />
 
-                <Button
-                    android:id="@+id/Gift"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/gift"
-                    android:clickable="true"
-                    android:focusable="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:text="GIFT"
+                android:textColor="#71410D"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="GIFT"
-                    android:textColor="#7B3F00"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
-        <!-- PERSONALIZED Card -->
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
+            android:layout_height="125dp"
+            android:layout_columnSpan="1"
             android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="#ECD7B2"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:id="@+id/personalized">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:cardBackgroundColor="#ECD7B2">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="personalised Icon"
+                android:src="@drawable/personalized" />
 
-                <Button
-                    android:id="@+id/personalized"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/premade"
-                    android:clickable="true"
-                    android:focusable="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:text="PERSONALISED"
+                android:textColor="#71410D"
+                android:textSize="13sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="PERSONALIZED"
-                    android:textColor="#7B3F00"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- PRE-MADE Card -->
-        <androidx.cardview.widget.CardView
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
+            android:layout_height="125dp"
+            android:layout_columnSpan="1"
             android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="#ECD7B2"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="13dp"
+            android:id="@+id/premade">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="pre made Icon"
+                android:src="@drawable/premade" />
 
-                <Button
-                    android:id="@+id/premade"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/personalized"
-                    android:clickable="true"
-                    android:focusable="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="PRE-MADE"
+                android:textAlignment="center"
+                android:textColor="#71410D"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="PRE-MADE"
-                    android:textColor="#7B3F00"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
-        <!-- MOST LIKED Card -->
-        <androidx.cardview.widget.CardView
+        <LinearLayout
+            android:id="@+id/trending"
             android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
+            android:layout_height="125dp"
+            android:layout_row="0"
+            android:layout_columnSpan="1"
             android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="#ECD7B2"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="trending Icon"
+                android:src="@drawable/trending" />
 
-                <Button
-                    android:id="@+id/trending"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/trending"
-                    android:clickable="true"
-                    android:focusable="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:text="TRENDING"
+                android:textColor="#71410D"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="MOST LIKED"
-                    android:textColor="#7B3F00"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
     </GridLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+
+
+
+
+
+
+

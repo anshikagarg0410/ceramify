@@ -5,7 +5,7 @@
         <solid android:color="@color/mycolor" />
         <stroke
             android:width="2dp"
-            android:color="#C97B57" /> <!-- Choose your accent/border color -->
+            android:color="#8C3608" /> <!-- Choose your accent/border color -->
         <corners android:radius="24dp"/>
     </shape>
 
