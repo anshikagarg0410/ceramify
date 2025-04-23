@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "mypage1"
+rootProject.name = "Ceramify"
 include(":app")
+ 

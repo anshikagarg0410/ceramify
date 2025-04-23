@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:background="@drawable/img"
+    android:foregroundTint="#E4D4BC"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/baseline_arrow_back_ios_24" />
+
+        <!-- Ceramify Logo -->
+        <ImageView
+            android:id="@+id/ceramify_logo"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ceramify" />
+
+        <!-- Profile Icon -->
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/baseline_person_24" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="356dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/alice"
+        android:text="What you wish to do ?"
+        android:textColor="#71410D"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:columnCount="2">
+
+        <!-- Copy the SELL button layout here for each item -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Sell Icon"
+                android:src="@drawable/logosell" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:text="SELL"
+                android:textColor="#71410D"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Sell Icon"
+                android:src="@drawable/logobuy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:text="BUY"
+                android:textColor="#71410D"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Sell Icon"
+                android:src="@drawable/logoshopsnearby" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="SHOPS NEARBY"
+                android:textAlignment="center"
+                android:textColor="#71410D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Sell Icon"
+                android:src="@drawable/logoworkshops" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:text="WORKSHOPS"
+                android:textColor="#71410D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Sell Icon"
+                android:src="@drawable/logocourses" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:text="COURSES"
+                android:textColor="#71410D"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Sell Icon"
+                android:src="@drawable/logocollabs" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:text="COLLABS"
+                android:textColor="#71410D"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+
+</LinearLayout>

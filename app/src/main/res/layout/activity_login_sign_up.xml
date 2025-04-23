@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img"
+    tools:context=".loginSignUpActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:foregroundGravity="center"
+        android:layout_gravity="center"
+        android:padding="12dp"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@drawable/ceramifylogo" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:foregroundGravity="center"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ceramify" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="310dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/alice"
+        android:text="Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#8A6A4B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#E4D4BC"
+        app:strokeColor="#CAA883"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="315dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/alice"
+        android:text="Sign Up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#8A6A4B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#E4D4BC"
+        app:cornerRadius="100dp"
+        app:strokeColor="#CAA883"
+        app:strokeWidth="2dp" />
+
+</LinearLayout>
