@@ -1,4 +1,4 @@
-package com.igdtuw.mypage1
+package com.igdtuw.ceramify
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.igdtuw.mypage1.R
 
 
 class ShopsnearActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class ShopsnearActivity : AppCompatActivity() {
 
         val textOne=findViewById<TextView>(R.id.text1)
         textOne.setOnClickListener{
-            val intent=Intent(this,MyPage2::class.java)
+            val intent=Intent(this, MyPage2::class.java)
             startActivity(intent)
             
         }

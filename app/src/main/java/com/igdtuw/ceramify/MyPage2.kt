@@ -1,4 +1,4 @@
-package com.igdtuw.mypage1
+package com.igdtuw.ceramify
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.igdtuw.mypage1.R
 
 class MyPage2:AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
