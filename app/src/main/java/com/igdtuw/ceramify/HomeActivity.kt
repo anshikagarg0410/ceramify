@@ -33,6 +33,11 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this,CourseMainActivity2::class.java)
             startActivity(intent)
         }
+        val shopsnearbyLayout = findViewById<LinearLayout>(R.id.shopsnearbyLayout)
+        shopsnearbyLayout.setOnClickListener {
+            val intent = Intent(this,ShopsnearActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
